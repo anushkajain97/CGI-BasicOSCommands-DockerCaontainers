@@ -1,0 +1,21 @@
+<script type="text/javascript">
+
+  function doSubmit(form){
+    var urls = form['url'];
+    var i = urls && urls.length;
+    while(i--){
+       if(urls[i].checked){
+              window.location = urls[i].value;
+       }
+    }
+    return false;
+   }
+</script>
+<body style="background-color:peachpuff;">
+<form action="" onsubmit="return doSubmit(this)">
+<input type="radio" name="url" value="http://192.168.42.88/form.html" /> Run basic menu-based OS Commands<br><br>
+<input type="radio" name="url" value="http://192.168.42.88/docker_page.html" /> Launch Docker OS Containers<br>
+<br>
+<input type="submit" value="Submit">
+</form>
+</body>
